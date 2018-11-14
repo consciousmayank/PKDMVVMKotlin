@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.embadmin.pkdmvvmkotlin.homepage.fragment.accountScreen.AccountViewModel" />
+        <variable
+            name="userInfo"
+            type="com.example.embadmin.pkdmvvmkotlin.modelClasses.account.AccountResponse.ResponseData.Details"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".homepage.fragment.accountScreen.AccountFragment">
+
+
+        <ImageView
+            android:id="@+id/user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:src="@{userInfo.profilePhoto}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            tools:text="User Name"
+            android:text="@{userInfo.firstName +userInfo.lastName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_profile" />
+
+        <TextView
+            android:id="@+id/user_emailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            tools:text="User Email Id"
+            android:text="@{userInfo.email}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+        <TextView
+            android:id="@+id/user_ph_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            tools:text="User Phone Number"
+            android:text="@{userInfo.contactNumber}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_emailId" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

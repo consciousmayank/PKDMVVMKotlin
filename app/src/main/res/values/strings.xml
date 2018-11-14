@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PKD MVVM Kotlin</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Categories</string>
+    <string name="title_notifications">My Account</string>
+    <string name="app_title">PKD-MVVM-Kotlin</string>
+</resources>
